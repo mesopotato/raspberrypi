@@ -128,18 +128,18 @@ async def run(model: str, max_results: int, score_threshold: float, num_threads:
         cat_detected = True 
         print("Cat detected!")
         
-      #score = round(category.score, 2)
-      #result_text = category_name + ' (' + str(score) + ')'
-      #text_location = (_LEFT_MARGIN, (idx + 2) * _ROW_SIZE)
-      #cv2.putText(image, result_text, text_location, cv2.FONT_HERSHEY_PLAIN,
-      #            _FONT_SIZE, _TEXT_COLOR, _FONT_THICKNESS)
+     # score = round(category.score, 2)
+     # result_text = category_name + ' (' + str(score) + ')'
+     # text_location = (_LEFT_MARGIN, (idx + 2) * _ROW_SIZE)
+     # cv2.putText(image, result_text, text_location, cv2.FONT_HERSHEY_PLAIN,
+     #             _FONT_SIZE, _TEXT_COLOR, _FONT_THICKNESS)
     
     if cat_detected :
-      #text = "CAT DETECTED" 
-      #text_size = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, 1, 2)[0]
-      #text_x = (image.shape[1] - text_size[0]) // 2 
-      #text_y = (image.shape[0] - text_size[1]) // 2 
-      #cv2.putText(image, text, (text_x, text_y), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
+     # text = "CAT DETECTED" 
+     # text_size = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, 1, 2)[0]
+     # text_x = (image.shape[1] - text_size[0]) // 2 
+     # text_y = (image.shape[0] - text_size[1]) // 2 
+     # cv2.putText(image, text, (text_x, text_y), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
       if limit >= cadence : 
           await send_cat_photo(image)
           limit = 0
